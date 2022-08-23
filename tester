@@ -1,0 +1,14 @@
+local colorBlock = game.Workspace.Led
+
+local red = Color3.fromRGB(255, 87, 174)
+local green = Color3.fromRGB(8, 255, 45)
+local blue = Color3.fromRGB(0, 0, 255)
+
+for count= 0,10,1 do
+colorBlock.Color = red
+wait(1)
+colorBlock.Color = green
+wait(1)
+colorBlock.Color = blue
+wait(1)
+end
