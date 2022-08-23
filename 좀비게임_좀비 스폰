@@ -1,0 +1,16 @@
+local ZombieCount = 0
+local Zombie = game.ReplicatedStorage.Zombie_Drooling
+local Spawn_Points = game.Workspace.ZombieSpawnPoint:GetChildren()
+
+wait(3)
+
+while ZombieCount <= 100 do
+  local ZombieClone = Zombie:Clone()
+  local RandomPickup = Spawn_Points[math.random(1, #Spawn_Points)]
+
+  ZombieCount += 1
+  ZombieClone.Parent = game.Workspace.ZombieSpawnPoint
+  ZombieClone.UpperTorso.CFrame = RandomPickup.CFrame
+
+  wait(0.5)
+end
